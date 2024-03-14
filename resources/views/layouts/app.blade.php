@@ -12,5 +12,7 @@
     
     @include('partials.header')
 
+    @yield('main')
+
 </body>
 </html>

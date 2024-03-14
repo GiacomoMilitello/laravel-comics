@@ -34,3 +34,45 @@ nav{
       }
     }
   }
+
+  #content-here{
+    background-color: black;
+    #jumbo{
+      height: 300px;
+      width: 100%;
+      background-image: url(../img/jumbotron.jpg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      position: relative;
+      span{
+        font-size: 140%;
+        background-color: $dc-color;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        transform: translateY(-50%); 
+      }
+    }
+    button{
+        background-color: $dc-color;
+        color: white;
+        border: none;
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+    }
+}
+
+.col-2{
+  figure{
+    aspect-ratio: 1;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h4{
+    font-size: 90%;
+}
+}

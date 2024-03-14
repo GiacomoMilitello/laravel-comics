@@ -30,7 +30,8 @@ Route::get('/', function () {
         [ 'name' => 'shop' ],
     ];
 
-    return view('pages.welcome', compact('menuLinks'));
+        $comics = config('comics');
+    return view('pages.welcome', compact('menuLinks', 'comics'));
 })->name('homePage');
 
 
