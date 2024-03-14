@@ -34,9 +34,12 @@
                 @foreach ($shops as $shop)
 
                     <li  class="">
-                        <figure>
-                            <img src="{{ Vite::asset('resources/img/' . $shop.['image'] ) }}" alt="">
-                        </figure>
+
+                        <a class="text-decoration-none text-uppercase d-flex align-items-center text-white gap-3 py-4" aria-current="page" href="#">
+                            <figure style="background-image: url('{{ Vite::asset($shop['image']) }}')">
+                            </figure>
+                            {{ $shop['name']}}
+                        </a>
                     </li>
 
                 @endforeach

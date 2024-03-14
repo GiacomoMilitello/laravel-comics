@@ -76,3 +76,64 @@ h4{
     font-size: 90%;
 }
 }
+
+#our-shop{
+  background-color: $dc-color;
+  ul{
+      li{
+          a{
+              font-size: 85%;
+              border-bottom: 3.5px solid transparent;
+              &:hover {
+                  color: $dc-color;
+                  border-bottom: 3.5px solid white;
+              }
+              figure{
+                  width: 40px;
+                  height: 40px;
+                  @include background-contain;
+              }
+          }
+      }
+  }
+}
+
+#footer-links{
+  background-image: url(../img/footer-bg.jpg);
+  li{
+    font-size: 90%;
+    a{
+        font-size: 90%;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            color: $dc-color;
+            border-bottom: 1px solid white;
+        }
+    }
+  }
+}
+#dc-logo{
+      background-image: url(../img/dc-logo-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+
+      #sign-up{
+        background-color: #333333;
+        button{
+            border: 1px solid $dc-color;
+            background-color: transparent;
+            color: white;
+            &:hover {
+            color: $dc-color;
+            border: 1px solid white;
+            }
+        }
+        li{
+            color: $dc-color;
+            figure{
+                width: 25px;
+            }
+        }
+    }

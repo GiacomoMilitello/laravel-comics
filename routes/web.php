@@ -32,24 +32,74 @@ Route::get('/', function () {
 
     $shops = [
         [ 'name' => 'digital comics',
-        'image' => 'src/img/buy-comics-digital-comics.png' 
+        'image' => 'resources/img/buy-comics-digital-comics.png' 
         ],
         [ 'name' => 'dc merchandise',
-        'image' => 'src/img/buy-comics-merchandise.png' 
+        'image' => 'resources/img/buy-comics-merchandise.png' 
         ],
         [ 'name' => 'subscription',
-        'image' => 'src/img/buy-comics-subscriptions.png' 
+        'image' => 'resources/img/buy-comics-subscriptions.png' 
         ],
         [ 'name' => 'comic shop locator',
-        'image' => 'src/img/buy-comics-shop-locator.png' 
+        'image' => 'resources/img/buy-comics-shop-locator.png' 
         ],
         [ 'name' => 'dc power visa',
-        'image' => 'src/img/buy-dc-power-visa.svg' 
+        'image' => 'resources/img/buy-dc-power-visa.svg' 
         ]
     ];
 
+    $coomics = [
+        [ 'name' => 'Characters' ],
+        [ 'name' => 'Comics' ],
+        [ 'name' => 'Movies' ],
+        [ 'name' => 'TV' ],
+        [ 'name' => 'Games' ],
+        [ 'name' => 'Videos' ],
+        [ 'name' => 'News' ]
+    ];
+
+    $shoops = [
+        [ 'name' => 'Shop DC' ],
+        [ 'name' => 'Shop DC Collectibles' ]
+    ];
+
+    $dc = [
+        [ 'name' => 'Terms Of Use' ],
+        [ 'name' => 'Privacy policy (New)' ],
+        [ 'name' => 'Ad Choices' ],
+        [ 'name' => 'Advertising' ],
+        [ 'name' => 'Jobs' ],
+        [ 'name' => 'Subscriptions' ],
+        [ 'name' => 'Talent Workshops' ],
+        [ 'name' => 'CPSC Certificates' ],
+        [ 'name' => 'Ratings' ],
+        [ 'name' => 'Shop Help' ],
+        [ 'name' => 'Contact Us' ]
+    ];
+
+    $sites = [
+        [ 'name' => 'DC' ],
+        [ 'name' => 'MAD Magazine' ],
+        [ 'name' => 'DC Kids' ],
+        [ 'name' => 'DC Universe' ],
+        [ 'name' => 'DC Power Visa' ]
+    ];
+
+    $socials = [
+        ['image' => 'resources/img/footer-facebook.png' 
+        ],
+        ['image' => 'resources/img/footer-twitter.png' 
+        ],
+        ['image' => 'resources/img/footer-youtube.png' 
+        ],
+        ['image' => 'resources/img/footer-pinterest.png' 
+        ],
+        ['image' => 'resources/img/footer-periscope.png' 
+        ],
+    ];
+
         $comics = config('comics');
-    return view('pages.welcome', compact('menuLinks', 'comics', 'shops'));
+    return view('pages.welcome', compact('menuLinks', 'comics', 'shops', 'coomics', 'shoops', 'dc', 'sites', 'socials'));
 })->name('homePage');
 
 
