@@ -31,9 +31,15 @@
 
         <div id="our-shop" class="">
             <ul class="d-flex justify-content-between  list-unstyled gap-4 w-75 mx-auto">
-                <li v-for="shop in shops" :key="shop.name" class="">
-                    
-                </li>
+                @foreach ($shops as $shop)
+
+                    <li  class="">
+                        <figure>
+                            <img src="{{ Vite::asset('resources/img/' . $shop.['image'] ) }}" alt="">
+                        </figure>
+                    </li>
+
+                @endforeach
             </ul>
         </div>
     </main>
