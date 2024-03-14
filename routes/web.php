@@ -17,7 +17,20 @@ use App\Http\Controllers\Home\WelcomeController as WelcomeController;
 
 Route::get('/', function () {
 
-    return view('pages.welcome');
+    $menuLinks = [
+        [ 'name' => 'characters' ],
+        [ 'name' => 'comics' ],
+        [ 'name' => 'movies' ],
+        [ 'name' => 'tv' ],
+        [ 'name' => 'games' ],
+        [ 'name' => 'collectibles' ],
+        [ 'name' => 'videos' ],
+        [ 'name' => 'fans' ],
+        [ 'name' => 'news' ],
+        [ 'name' => 'shop' ],
+    ];
+
+    return view('pages.welcome', compact('menuLinks'));
 })->name('homePage');
 
 

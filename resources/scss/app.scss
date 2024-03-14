@@ -1,11 +1,36 @@
 /*resources/scss/app.scss*/
 @import "bootstrap/scss/bootstrap";
 
-main
-{
-    background-image: url('../img/page_bg.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: black;
+@import "./partials/mixins";
+@import "./partials/variables";
+
+ul{
+    margin-bottom: 0;
 }
+
+figure{
+    margin: 0;
+}
+
+nav{
+    figure{
+        width: 60px;
+        height: 60px;
+    }
+    ul{
+      height: 90px;
+      li{
+        height: 90px;
+        a{
+          font-size: 90%;
+          height: 90px;
+          color: black;
+          border-bottom: 5px solid transparent;
+          &:hover {
+            color: $dc-color;
+            border-bottom: 5px solid $dc-color;
+          }
+        }
+      }
+    }
+  }
